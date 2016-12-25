@@ -1,0 +1,129 @@
+.torrent-list-item {
+  display: flex;
+  align-items: center;
+  padding: $torrent-list-item-padding;
+  border-right: none;
+  border-left: none;
+  cursor: pointer;
+  user-select: none;
+  @include transition(background-color);
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:hover {
+    background-color: $torrent-list-item-hover-bg;
+  }
+}
+
+.torrent-list-item-start-stop-button {
+  flex-shrink: 0;
+  width: $torrent-list-item-start-stop-button-size;
+  height: $torrent-list-item-start-stop-button-size;
+  margin-right: $torrent-list-item-spacing;
+  padding: 0;
+  border-radius: 50%;
+
+  .material-icons {
+    display: block;
+    font-size: $torrent-list-item-start-stop-button-font-size;
+  }
+}
+
+.torrent-list-item-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.torrent-list-item-header {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  margin-bottom: $torrent-list-item-content-spacing;
+}
+
+.torrent-list-item-name {
+  flex-grow: 1;
+  margin-right: $torrent-list-item-header-spacing;
+  font-size: $torrent-list-item-name-font-size;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.torrent-list-item-action {
+  &:not(:last-child) {
+    margin-right: $torrent-list-item-header-spacing;
+  }
+}
+
+.torrent-list-item-action-button {
+  display: block;
+  color: $torrent-list-item-action-button-color;
+  font-size: $torrent-list-item-action-button-icon-size;
+
+  &:hover {
+    color: $torrent-list-item-action-button-hover-color;
+  }
+}
+
+.torrent-list-item-info {
+  white-space: nowrap;
+  overflow-x: auto;
+
+  .separator::after {
+    content: "•";
+    margin: 0 $torrent-list-item-separator-margin;
+  }
+
+  @mixin arrow {
+    margin-left: $torrent-list-item-arrow-margin-left;
+    font-size: $torrent-list-item-arrow-font-size;
+    font-family: sans-serif;
+  }
+
+  .arrow-down::after {
+    @include arrow;
+    content: "↓";
+    margin-right: $torrent-list-item-arrow-margin-right;
+  }
+
+  .arrow-up::after {
+    @include arrow;
+    content: "↑";
+  }
+}
+
+.torrent-list-item-progress {
+  height: $torrent-list-item-progress-height;
+  margin-bottom: $torrent-list-item-content-spacing;
+}
+
+.torrent-list-item-enter {
+  transform: translateX(-125%);
+
+  &.panel {
+    display: none;
+  }
+}
+
+.torrent-list-item-enter.torrent-list-item-enter-active {
+  transform: none;
+  transition: transform $torrent-list-item-enter-duration ease-out;
+}
+
+.torrent-list-item-leave {
+  transform: none;
+
+  &.panel {
+    display: none;
+  }
+}
+
+.torrent-list-item-leave.torrent-list-item-leave-active {
+  transform: translateX(125%);
+  transition: transform $torrent-list-item-leave-duration ease-in;
+}

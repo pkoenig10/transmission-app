@@ -1,0 +1,30 @@
+.nav-pills {
+  background-color: $nav-pills-bg;
+
+  &.nav-stacked {
+    .nav-item {
+      border-top: $nav-item-border-start;
+      border-bottom: $nav-item-border-end;
+    }
+  }
+
+  &:not(.nav-stacked) {
+    display: flex;
+    margin: 0 auto $nav-pills-margin-bottom;
+    overflow-x: auto;
+
+    .nav-item {
+      border-right: $nav-item-border-end;
+      border-left: $nav-item-border-start;
+    }
+  }
+
+  .nav-link {
+    color: $nav-link-color;
+
+    &:hover {
+      color: $nav-link-hover-color;
+      background-color: $nav-link-hover-bg;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.dropdown-menu {
+  box-shadow: $dropdown-box-shadow;
+  transform-origin: right top;
+
+  .open & {
+    animation: dropdown-animation $dropdown-animation-duration $dropdown-animation-timing-function;
+  }
+}
+
+@keyframes dropdown-animation {
+  from {
+    top: $dropdown-animation-top;
+    opacity: 0;
+    transform: scale($dropdown-animation-scale-x, $dropdown-animation-scale-y);
+  }
+
+  to {
+    top: 100%;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.dropdown-item {
+  font-weight: $dropdown-item-font-weight;
+  font-size: $dropdown-item-font-size;
+}

@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "outDir": "./build/",
+        "jsx": "react",
+        "module": "commonjs",
+        "target": "es6",
+        "lib": ["es6", "dom", "es2016"],
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "suppressImplicitAnyIndexErrors": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

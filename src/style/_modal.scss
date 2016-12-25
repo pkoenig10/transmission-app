@@ -1,0 +1,23 @@
+.modal-content {
+  overflow: hidden;
+}
+
+.modal-header {
+  background-color: $modal-header-bg;
+
+  .close {
+    color: $modal-close-color;
+  }
+}
+
+.modal-body {
+  overflow-wrap: break-word;
+}
+
+.modal-footer {
+  background-color: $modal-footer-bg;
+
+  :not(:last-child) {
+    margin-right: $modal-footer-button-spacing;
+  }
+}

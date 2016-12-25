@@ -1,0 +1,4 @@
+.btn,
+.btn-icon {
+  @include transition(background-color);
+}

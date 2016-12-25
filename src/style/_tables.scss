@@ -1,0 +1,16 @@
+.table {
+  thead {
+    border-top: $thead-border-top;
+    border-bottom: $thead-border-bottom;
+    background-color: $thead-bg;
+  }
+
+  th {
+    font-weight: $table-header-font-weight;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+}

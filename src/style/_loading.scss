@@ -1,0 +1,20 @@
+.loading {
+  width: $loading-size;
+  height: $loading-size;
+  margin: $loading-margin-top auto 0;
+  border: $loading-border-width solid transparent;
+  border-top-color: $loading-color;
+  border-left-color: $loading-color;
+  border-radius: 50%;
+  animation: loading $loading-duration linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}

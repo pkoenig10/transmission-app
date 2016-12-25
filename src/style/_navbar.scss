@@ -1,0 +1,29 @@
+.navbar {
+  box-shadow: $navbar-box-shadow;
+  background-color: $navbar-bg;
+}
+
+.navbar-logo {
+  height: $navbar-logo-height;
+  vertical-align: top;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+
+  .nav-item {
+    .material-icons {
+      font-size: 20px;
+      vertical-align: -4px;
+    }
+  }
+
+  .nav-link {
+    @include transition(color);
+  }
+
+  .nav-button {
+    height: $nav-button-height;
+  }
+}

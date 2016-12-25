@@ -1,0 +1,15 @@
+.pieces-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pieces-grid-item {
+  width: $pieces-grid-item-size;
+  height: $pieces-grid-item-size;
+  margin: $pieces-grid-item-margin;
+  background-color: $pieces-grid-item-bg;
+
+  &.have {
+    background-color: $pieces-grid-item-bg-have;
+  }
+}

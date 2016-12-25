@@ -1,0 +1,47 @@
+@import "forms/action-form-component";
+@import "forms/checkbox-form-component";
+@import "forms/info-form-component";
+@import "forms/number-form-component";
+@import "forms/schedule-form-component";
+@import "forms/select-form-component";
+@import "forms/select-number-form-component";
+@import "forms/text-form-component";
+
+.form-header {
+  @extend .row;
+  @extend .col-xs-12;
+  margin-bottom: $form-header-margin-bottom;
+  font-weight: $form-label-font-weight;
+
+  &:not(:first-child) {
+    margin-top: $form-section-spacing;
+  }
+}
+
+.form-row {
+  @extend .row;
+  @extend .flex-items-xs-middle;
+  @extend .form-group;
+}
+
+.form-label,
+.col-form-label {
+  font-weight: $form-label-font-weight;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-check:last-child {
+  margin-bottom: 0;
+}
+
+.form-control {
+  @include transition(background-color);
+
+  &:disabled,
+  &[readonly] {
+    color: $input-disabled-color;
+  }
+}

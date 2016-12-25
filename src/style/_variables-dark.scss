@@ -1,0 +1,64 @@
+@import "variables";
+
+// Forms
+
+$input-color-disabled: $dark-theme-gray-lighter;
+
+$info-form-value-color: $dark-theme-gray-lighter;
+
+
+// Modals
+
+$modal-header-bg: $dark-theme-gray;
+
+$modal-footer-bg: $modal-header-bg;
+
+$modal-close-color: #fff;
+
+
+// Nav
+
+$nav-pills-bg: $dark-theme-gray-darker;
+$nav-pills-margin-bottom: 1rem;
+
+$nav-item-border-start: 1px solid $dark-theme-border-start-color;
+$nav-item-border-end: 1px solid $dark-theme-border-end-color;
+
+$nav-link-color: $dark-theme-gray-lighter;
+$nav-link-hover-color: $dark-theme-white;
+$nav-link-hover-bg: $nav-pills-active-link-bg;
+
+
+// Navbar
+
+$navbar-bg: #000;
+
+
+// Panel
+
+$panelcolor: $dark-theme-gray-light;
+
+
+// Progress
+
+$progress-bar-secondary-bg: $dark-theme-gray-lighter;
+
+
+// Tables
+
+$thead-bg: $dark-theme-gray-darker;
+$thead-border-top: 1px solid $dark-theme-border-start-color;
+$thead-border-bottom: 1px solid $dark-theme-border-end-color;
+
+
+// Torrent List Item
+
+$torrent-list-item-hover-bg: $dark-theme-hover-bg;
+
+$torrent-list-item-action-button-color: $dark-theme-gray-lighter;
+$torrent-list-item-action-button-hover-color: $dark-theme-white;
+
+
+// Torrent Pieces Panel
+
+$pieces-grid-item-bg: $dark-theme-gray;

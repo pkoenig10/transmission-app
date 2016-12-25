@@ -1,0 +1,7 @@
+@mixin content-container {
+  padding: $content-padding;
+}
+
+@mixin content-panel {
+  padding: 0;
+}

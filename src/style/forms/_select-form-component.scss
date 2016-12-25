@@ -1,0 +1,7 @@
+.select-form-label {
+  @extend .col-xs-12, .col-sm-5;
+}
+
+.select-form-input {
+  @extend .col-xs-12, .col-sm-7;
+}

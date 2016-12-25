@@ -1,0 +1,169 @@
+// Add Torrents Modal
+
+$add-torrents-modal-files-label-text-margin-right: .75rem;
+$add-torrents-modal-files-list-padding-left: 1.25rem;
+
+
+// Alerts
+
+$alert-height: 42px;
+
+$alert-title-margin-right: .25rem;
+
+$alert-leave-opacity-duration: 150ms;
+$alert-leave-margin-top-duration: 75ms;
+$alert-leave-margin-top-delay: 150ms;
+
+
+// Content
+
+$content-padding: 1rem;
+
+
+// Dropdowns
+
+$dropdown-animation-top: 50%;
+$dropdown-animation-scale-x: .875;
+$dropdown-animation-scale-y: .75;
+$dropdown-animation-duration: 100ms;
+$dropdown-animation-timing-function: linear;
+
+$dropdown-item-font-size: 15px;
+$dropdown-item-font-weight: 600;
+
+// Forms
+
+$input-disabled-color: $gray-light;
+
+$form-section-spacing: 2.5rem;
+$form-header-margin-bottom: 1rem;
+$form-label-font-weight: 600;
+
+$action-form-input-spacing: .5rem;
+$info-form-value-color: $gray-light;
+
+
+// Loading
+
+$loading-size: 50px;
+$loading-margin-top: 80px;
+$loading-border-width: 3px;
+$loading-color: $brand-primary;
+$loading-duration: .5s;
+
+
+// Modals
+
+$modal-header-bg: transparent;
+
+$modal-footer-bg: transparent;
+$modal-footer-button-spacing: .5rem;
+
+$modal-close-color: $close-color;
+
+
+// Nav
+
+$nav-pills-bg: transparent;
+$nav-pills-margin-bottom: 1rem;
+
+$nav-item-border-start: none;
+$nav-item-border-end: none;
+
+$nav-link-color: $brand-primary;
+$nav-link-hover-color: $link-hover-color;
+$nav-link-hover-bg: transparent;
+
+$nav-button-height: 30px;
+
+// Navbar
+
+$navbar-height: 54px;
+
+$navbar-bg: $gray-lightest;
+$navbar-box-shadow: 0 2px 2px rgba(#000, .15);
+
+$navbar-logo-height: 30px;
+
+
+// Panel
+
+$panel-color: $gray;
+$panel-margin-top: 80px;
+$panel-icon-size: 64px;
+$panel-icon-margin-bottom: 1rem;
+
+// Progress
+
+$progress-bar-secondary-bg: $gray-light;
+
+$progress-bar-stripe-size: 40px;
+
+$progress-bar-transition-duration: 1.25s;
+
+$progress-bar-animation-duration: 2s;
+
+
+// Table
+
+$table-header-font-weight: 600;
+
+$thead-bg: transparent;
+$thead-border-top: none;
+$thead-border-bottom: none;
+
+
+// Torrent List Item
+
+$torrent-list-item-padding: 1rem;
+$torrent-list-item-hover-bg: rgba(#000, .03);
+
+$torrent-list-item-spacing: 1rem;
+$torrent-list-item-content-spacing: .5rem;
+$torrent-list-item-header-spacing: .75rem;
+
+$torrent-list-item-start-stop-button-size: 50px;
+$torrent-list-item-start-stop-button-font-size: 2.125rem;
+
+$torrent-list-item-name-font-size: 1.125rem;
+
+$torrent-list-item-action-button-color: $gray;
+$torrent-list-item-action-button-hover-color: $gray-light;
+$torrent-list-item-action-button-icon-size: 24px;
+
+$torrent-list-item-progress-height: 5px;
+
+$torrent-list-item-separator-margin: .5rem;
+$torrent-list-item-arrow-font-size: 1.125rem;
+$torrent-list-item-arrow-margin-left: .125rem;
+$torrent-list-item-arrow-margin-right: .5rem;
+
+$torrent-list-item-enter-duration: 300ms;
+$torrent-list-item-leave-duration: 300ms;
+
+
+// Torrent Files Panel
+
+$files-table-col-progress-width: 130px;
+$files-table-col-wanted-width: 130px;
+$files-table-col-priority-width: 130px;
+
+$files-table-cell-padding-y: .25rem;
+
+$files-table-cell-name-icon-size: 24px;
+$files-table-cell-name-icon-color: $gray;
+$files-table-cell-name-input-min-width: 150px;
+
+
+// Torrent Pieces Panel
+
+$pieces-grid-item-size: 15px;
+$pieces-grid-item-margin: 1px;
+$pieces-grid-item-bg: $gray-lighter;
+$pieces-grid-item-bg-have: $brand-primary;
+
+
+// Transitions
+
+$transition-duration: 150ms;
+$transition-timing-function: ease-in-out;

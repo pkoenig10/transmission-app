@@ -1,0 +1,13 @@
+.schedule-form-time-spacer {
+  @extend .col-sm-5, .hidden-xs-down;
+}
+
+.schedule-form-time-separator {
+  @extend .col-xs-2, .col-sm-1;
+  text-align: center;
+}
+
+.schedule-form-time-start,
+.schedule-form-time-end {
+  @extend .col-xs-5, .col-sm-3;
+}

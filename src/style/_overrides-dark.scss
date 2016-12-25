@@ -1,0 +1,98 @@
+@import "overrides";
+
+// Colors
+
+$brand-primary: #cc7b19;
+$brand-secondary: #f9be03;
+$brand-info: #0275d8;
+
+$dark-theme-gray-darkest: #1f1f1f;
+$dark-theme-gray-darker: #282828;
+$dark-theme-gray-dark: #2f2f2f;
+$dark-theme-gray: #333;
+$dark-theme-gray-light: #555;
+$dark-theme-gray-lighter: #999;
+$dark-theme-gray-lightest: #ccc;
+$dark-theme-white: #eee;
+
+$dark-theme-hover-bg: rgba(#000, .15);
+
+$dark-theme-border-start-color: #2d2d2d;
+$dark-theme-border-end-color: #232323;
+$dark-theme-modal-border-color: #222;
+
+
+// Body
+
+$body-bg: $dark-theme-gray-darkest;
+$body-color: $dark-theme-white;
+
+
+// Buttons
+
+$btn-secondary-color: $dark-theme-white;
+$btn-secondary-bg: $dark-theme-gray-light;
+$btn-secondary-border: $dark-theme-gray-light;
+
+// Dropdowns
+
+$dropdown-bg: $dark-theme-gray;
+$dropdown-link-color: $dark-theme-gray-lightest;
+$dropdown-link-disabled-color: $dark-theme-gray-light;
+$dropdown-link-hover-color: $dark-theme-white;
+$dropdown-link-hover-bg: $dark-theme-hover-bg;
+$dropdown-divider-bg: $dark-theme-gray-light;
+$dropdown-border-width: 0;
+
+
+// Forms
+
+$input-bg: $dark-theme-gray-light;
+$input-bg-disabled: $dark-theme-gray;
+
+$input-color: $dark-theme-white;
+$input-bg-focus: $input-color;
+$input-color-focus: $input-bg;
+
+$input-btn-border-width: 0;
+
+
+// List group
+
+$list-group-border-color: $dark-theme-gray;
+
+
+// Nav
+
+$nav-pills-border-radius: 0;
+$nav-pills-active-link-color: $brand-secondary;
+$nav-pills-active-link-bg: $dark-theme-gray-dark;
+
+$nav-item-margin: 0;
+
+$nav-link-padding: .75em 1em;
+
+
+// Navbar
+
+$navbar-light-color: $dark-theme-gray-lighter;
+$navbar-light-active-color: $dark-theme-white;
+$navbar-light-hover-color: $dark-theme-white;
+
+
+// Modals
+
+$modal-content-bg: $dark-theme-gray-darker;
+$modal-content-border-width: 0;
+
+$modal-header-border-width: 1px;
+$modal-header-border-color: $dark-theme-modal-border-color;
+$modal-footer-border-color: $dark-theme-modal-border-color;
+
+
+// Tables
+
+$table-bg-accent: $dark-theme-hover-bg;
+
+$table-border-width: 0;
+$table-border-color: $dark-theme-gray-light;

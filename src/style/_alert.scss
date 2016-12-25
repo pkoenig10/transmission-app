@@ -1,0 +1,29 @@
+.alert {
+  margin-bottom: 0;
+  padding: $alert-padding-y $alert-padding-x;
+}
+
+.alert-content {
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.close + .alert-content {
+  margin-right: 1.5rem;
+}
+
+.alert-title {
+  margin-right: $alert-title-margin-right;
+}
+
+.alert-leave {
+  margin-top: 0;
+  opacity: 1;
+}
+
+.alert-leave.alert-leave-active {
+  margin-top: -$alert-height;
+  opacity: 0;
+  transition: opacity $alert-leave-opacity-duration linear, margin-top $alert-leave-margin-top-duration linear $alert-leave-margin-top-delay;
+}

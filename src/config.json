@@ -1,0 +1,7 @@
+{
+  "downloadDirs": [
+    {"name": "Downloads", "path": "/home/pkoenig10/Downloads"},
+    {"name": "Movies", "path": "/home/pkoenig10/Movies"},
+    {"name": "TV Shows", "path": "/home/pkoenig10/TV Shows"}
+  ]
+}

@@ -1,0 +1,18 @@
+.add-torrent-modal-files-label {
+  display: flex;
+  align-items: center;
+}
+
+.add-torrent-modal-files-label-text {
+  margin-right: $add-torrents-modal-files-label-text-margin-right;
+  margin-bottom: 0;
+}
+
+.add-torrent-modal-files-label-button {
+  margin-bottom: 0;
+}
+
+.add-torrent-modal-files-list {
+  margin-bottom: 0;
+  padding-left: $add-torrents-modal-files-list-padding-left;
+}

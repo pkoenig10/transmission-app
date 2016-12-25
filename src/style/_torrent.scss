@@ -1,0 +1,7 @@
+.torrent {
+  @include content-container;
+}
+
+.torrent-panel {
+  @include content-panel;
+}

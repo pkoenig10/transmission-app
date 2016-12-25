@@ -1,0 +1,11 @@
+.panel {
+  margin-top: $panel-margin-top;
+  color: $panel-color;
+  text-align: center;
+}
+
+.panel-icon {
+  display: block;
+  margin-bottom: $panel-icon-margin-bottom;
+  font-size: $panel-icon-size;
+}
