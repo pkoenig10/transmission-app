@@ -1,3 +1,4 @@
+import "whatwg-fetch";
 import {TransmissionError} from "../models/TransmissionError";
 
 export const enum ErrorType {
