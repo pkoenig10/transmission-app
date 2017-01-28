@@ -2,10 +2,10 @@ import {isError, range} from "lodash";
 import {delay} from "redux-saga";
 import {CallEffect, CallEffectArg, CallFuncRest, actionChannel, call, put, race, take} from "redux-saga/effects";
 import {AddTorrentsPayload, TransmissionAction, TransmissionActionType, getSessionAction, getTorrentsAction, setStateAddTorrentsErrorsAction, setStateConnectedAction, setStateIsPortOpenAction, setStateSessionAction, setStateTestingPortAction, setStateTorrentsAction, setStateUpdatingBlocklistAction, updateStateSessionAction, updateStateTorrentsInfoAction} from "../actions/TransmissionActions";
-import {BlocklistUpdateArgs, PortTestArgs, Session, TorrentGetArgs, TorrentSetArgs, Transmission} from "../api/Transmission";
+import {BlocklistUpdateArgs, PortTestArgs, Session, TorrentGetArgs, TorrentGetField, TorrentSetArgs, Transmission} from "../api/Transmission";
 import {TransmissionError} from "../models/TransmissionError";
 
-export const torrentGetInfoFields: string[] = [
+export const torrentGetInfoFields: TorrentGetField[] = [
     "addedDate",
     "desiredAvailable",
     "doneDate",
@@ -42,7 +42,7 @@ export const torrentGetInfoFields: string[] = [
     "uploadRatio",
     "wanted",
 ];
-export const torrentGetOptionsFields: string[] = [
+export const torrentGetOptionsFields: TorrentGetField[] = [
     "bandwidthPriority",
     "downloadDir",
     "downloadLimit",
@@ -56,7 +56,7 @@ export const torrentGetOptionsFields: string[] = [
     "uploadLimit",
     "uploadLimited",
 ];
-export const torrentGetFields: string[] = torrentGetInfoFields.concat(torrentGetOptionsFields);
+export const torrentGetFields: TorrentGetField[] = torrentGetInfoFields.concat(torrentGetOptionsFields);
 
 const transmission: Transmission = new Transmission();
 

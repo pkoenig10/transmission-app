@@ -311,7 +311,7 @@ export interface TorrentSetArgs {
     uploadLimited?: boolean;
 }
 
-type TorrentGetField = keyof Torrent;
+export type TorrentGetField = keyof Torrent;
 
 export interface TorrentGetArgs {
     torrents: Torrent[];
