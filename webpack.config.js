@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 const BabiliPlugin = require("babili-webpack-plugin");
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 function requireDefault(module, value) {
     try {
@@ -57,7 +57,7 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            title: 'Transmission',
+            title: "Transmission",
             template: "./src/index.html",
             minify: {
                 collapseWhitespace: true,
