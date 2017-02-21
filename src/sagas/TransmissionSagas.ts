@@ -94,7 +94,7 @@ export function* rootSaga() {
             ];
         } catch (e) {
             yield put(setStateConnectedAction(false));
-            yield call(delay, 5000);
+            yield call(delay, 1000);
         }
     }
 }
