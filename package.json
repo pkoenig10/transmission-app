@@ -25,7 +25,7 @@
     "@types/react-router": "2.0.41",
     "@types/requirejs": "2.1.28",
     "babili-webpack-plugin": "0.0.7",
-    "bootstrap": "4.0.0-alpha.5",
+    "bootstrap": "4.0.0-alpha.6",
     "classnames": "2.2.5",
     "css-loader": "0.26.1",
     "dateformat": "2.0.0",

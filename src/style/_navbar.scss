@@ -1,6 +1,11 @@
 .navbar {
+  //flex-direction: row;
   box-shadow: $navbar-box-shadow;
   background-color: $navbar-bg;
+}
+
+.navbar-brand {
+  flex: 1;
 }
 
 .navbar-logo {
@@ -9,7 +14,8 @@
 }
 
 .navbar-nav {
-  display: flex;
+  //display: flex;
+  //flex-direction: row;
   align-items: center;
 
   .nav-item {

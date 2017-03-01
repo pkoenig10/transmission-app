@@ -1,5 +1,6 @@
 .info-form-label {
-  @extend .col-xs-12, .col-sm-5, .flex-xs-top;
+  @extend .col-12, .col-sm-5;
+  align-self: start;
 
   .form-label {
     margin-bottom: 0;
@@ -7,7 +8,7 @@
 }
 
 .info-form-value {
-  @extend .col-xs-12, .col-sm-7;
+  @extend .col-12, .col-sm-7;
   color: $info-form-value-color;
   overflow-wrap: break-word;
 }

@@ -3,11 +3,11 @@
 }
 
 .schedule-form-time-separator {
-  @extend .col-xs-2, .col-sm-1;
+  @extend .col-2, .col-sm-1;
   text-align: center;
 }
 
 .schedule-form-time-start,
 .schedule-form-time-end {
-  @extend .col-xs-5, .col-sm-3;
+  @extend .col-5, .col-sm-3;
 }

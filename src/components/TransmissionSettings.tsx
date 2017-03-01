@@ -46,7 +46,7 @@ class TransmissionSettings extends React.PureComponent<TransmissionSettingsProps
                             {navItems}
                         </ul>
                     </div>
-                    <div className="col-xs-12 col-md-9">
+                    <div className="col-12 col-md-9">
                         {this.props.session ? this.panel() : <TransmissionLoading/>}
                     </div>
                 </div>

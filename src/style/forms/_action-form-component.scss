@@ -1,9 +1,9 @@
 .action-form-label {
-  @extend .col-xs-12, .col-sm-5;
+  @extend .col-12, .col-sm-5;
 }
 
 .action-form-input {
-  @extend .col-xs-12, .col-sm-7;
+  @extend .col-12, .col-sm-7;
   display: flex;
 
   :not(:last-child) {
@@ -12,7 +12,7 @@
 }
 
 .action-form-value {
-  @extend .col-xs-12;
+  @extend .col-12;
 }
 
 .port-open {

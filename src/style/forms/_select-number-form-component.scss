@@ -1,11 +1,11 @@
 .select-number-form-label {
-  @extend .col-xs-12, .col-sm-5;
+  @extend .col-12, .col-sm-5;
 }
 
 .select-number-form-select-input {
-  @extend .col-xs-5, .col-sm-3;
+  @extend .col-5, .col-sm-3;
 }
 
 .select-number-form-number-input {
-  @extend .col-xs-7, .col-sm-4;
+  @extend .col-7, .col-sm-4;
 }

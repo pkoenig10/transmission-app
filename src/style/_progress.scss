@@ -1,57 +1,57 @@
-.progress {
-  border-radius: $progress-border-radius;
-  background-color: $progress-bg;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: $progress-bar-bg;
-}
-
-.progress-bar-striped {
-  @include gradient-striped;
-  background-size: $progress-bar-stripe-size $progress-bar-stripe-size;
-}
-
-.progress-bar-transition {
-  transition: width $progress-bar-transition-duration linear;
-}
-
-.progress-bar-animated {
-  animation: progress-bar-stripes $progress-bar-animation-duration linear infinite;
-}
-
-@keyframes progress-bar-stripes {
-  from {
-    background-position-x: $progress-bar-stripe-size;
-  }
-
-  to {
-    background-position-x: 0;
-  }
-}
-
-@mixin progress-bar-variant($color) {
-  background-color: $color;
-}
-
-.progress-bar-secondary {
-  @include progress-bar-variant($progress-bar-secondary-bg);
-}
-
-.progress-bar-success {
-  @include progress-bar-variant($progress-bar-success-bg);
-}
-
-.progress-bar-info {
-  @include progress-bar-variant($progress-bar-info-bg);
-}
-
-.progress-bar-warning {
-  @include progress-bar-variant($progress-bar-warning-bg);
-}
-
-.progress-bar-danger {
-  @include progress-bar-variant($progress-bar-danger-bg);
-}
+//.progress {
+//  border-radius: $progress-border-radius;
+//  background-color: $progress-bg;
+//  overflow: hidden;
+//}
+//
+//.progress-bar {
+//  height: 100%;
+//  background-color: $progress-bar-bg;
+//}
+//
+//.progress-bar-striped {
+//  @include gradient-striped;
+//  background-size: $progress-bar-stripe-size $progress-bar-stripe-size;
+//}
+//
+//.progress-bar-transition {
+//  transition: width $progress-bar-transition-duration linear;
+//}
+//
+//.progress-bar-animated {
+//  animation: progress-bar-stripes $progress-bar-animation-duration linear infinite;
+//}
+//
+//@keyframes progress-bar-stripes {
+//  from {
+//    background-position-x: $progress-bar-stripe-size;
+//  }
+//
+//  to {
+//    background-position-x: 0;
+//  }
+//}
+//
+//@mixin progress-bar-variant($color) {
+//  background-color: $color;
+//}
+//
+//.progress-bar-secondary {
+//  @include progress-bar-variant($progress-bar-secondary-bg);
+//}
+//
+//.progress-bar-success {
+//  @include progress-bar-variant($progress-bar-success-bg);
+//}
+//
+//.progress-bar-info {
+//  @include progress-bar-variant($progress-bar-info-bg);
+//}
+//
+//.progress-bar-warning {
+//  @include progress-bar-variant($progress-bar-warning-bg);
+//}
+//
+//.progress-bar-danger {
+//  @include progress-bar-variant($progress-bar-danger-bg);
+//}

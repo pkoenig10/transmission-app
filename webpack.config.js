@@ -43,19 +43,19 @@ module.exports = {
         new webpack.ProvidePlugin({
             config: "config",
             jQuery: "jquery",
-            "window.Tether": "tether"
+            Tether: "tether"
         }),
-        new BabiliPlugin({
-            comments: false,
-        }),
-        new FaviconsWebpackPlugin({
-            logo: "./src/images/transmission.png",
-            prefix: "icons/",
-            title: "Transmission",
-            icons: {
-              firefox: false,
-            }
-        }),
+        // new BabiliPlugin({
+        //     comments: false,
+        // }),
+        // new FaviconsWebpackPlugin({
+        //     logo: "./src/images/transmission.png",
+        //     prefix: "icons/",
+        //     title: "Transmission",
+        //     icons: {
+        //       firefox: false,
+        //     }
+        // }),
         new HtmlWebpackPlugin({
             title: "Transmission",
             template: "./src/index.html",
