@@ -369,13 +369,13 @@ export interface FreeSpaceArgs {
 
 export interface TransmissionRequest {
     method: string;
-    arguments?: any;
+    arguments?: object;
     tag?: number;
 }
 
 export interface TransmissionResponse {
     result: string;
-    arguments?: any;
+    arguments?: object;
     tag?: number;
 }
 
@@ -494,7 +494,7 @@ export class Transmission {
         });
     }
 
-    private fetch = async (method: string, args?: any): Promise<any> => {
+    private fetch = async (method: string, args?: object): Promise<object> => {
         const transmissionRequest: TransmissionRequest = {
             method: method,
             arguments: args,
