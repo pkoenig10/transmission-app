@@ -27,7 +27,7 @@ module.exports = {
             { test: /\.png$/, loaders: ["url-loader"] },
             { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
             { test: /\.tsx?$/, loaders: ["ts-loader"] }
-        ],
+        ]
     },
 
     externals: {
@@ -46,14 +46,14 @@ module.exports = {
             "window.Tether": "tether"
         }),
         new BabiliPlugin({
-            comments: false,
+            comments: false
         }),
         new FaviconsWebpackPlugin({
             logo: "./src/images/transmission.png",
             prefix: "icons/",
             title: "Transmission",
             icons: {
-              firefox: false,
+              firefox: false
             }
         }),
         new HtmlWebpackPlugin({
