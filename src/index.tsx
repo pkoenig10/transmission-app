@@ -14,10 +14,6 @@ import {rootSaga} from "./sagas/TransmissionSagas";
 import {TransmissionState, initialTransmissionState} from "./state/TransmissionState";
 import "./style/main";
 
-if (navigator.registerProtocolHandler) {
-    navigator.registerProtocolHandler("magnet", window.location.origin + "#?url=%s", "Transmission");
-}
-
 const redirect: EnterHook = (_nextState: RouterState, replace: RedirectFunction) => {
     replace("/");
 };
