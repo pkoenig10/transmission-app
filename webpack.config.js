@@ -31,7 +31,7 @@ module.exports = {
     },
 
     externals: {
-        config: JSON.stringify(requireDefault("./src/config.json", {}))
+        config: JSON.stringify(requireDefault("./config.json", {}))
     },
 
     plugins: [
