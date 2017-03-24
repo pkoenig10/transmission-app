@@ -7,11 +7,11 @@
     "url": "https://github.com/pkoenig10/transmission-app.git"
   },
   "scripts": {
-    "tslint": "tslint --config tslint.json 'src/**/*.ts*'",
-    "tslint:fix": "tslint --config tslint.json --fix 'src/**/*.ts*'",
-    "stylelint": "stylelint --config stylelint.json 'src/**/*.scss'",
-    "webpack": "webpack --config webpack.config.js",
-    "webpack:watch": "webpack --config webpack.config.js --watch"
+    "tslint": "tslint 'src/**/*.ts*'",
+    "tslint:fix": "tslint --fix 'src/**/*.ts*'",
+    "stylelint": "stylelint 'src/**/*.scss'",
+    "webpack": "webpack",
+    "webpack:watch": "webpack --watch"
   },
   "dependencies": {
     "@types/bootstrap": "3.3.32",
