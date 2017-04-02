@@ -1,3 +1,4 @@
+import {orderBy} from "lodash";
 import * as React from "react";
 import {Peer} from "../../api/Transmission";
 import {percent, speedSize} from "../../utils/TransmissionUtils";
@@ -20,7 +21,7 @@ export class TorrentPeersPanel extends React.PureComponent<TransmissionTorrentPr
                             </tr>
                         </thead>
                         <tbody>
-                            {this.props.torrent.peers.map(this.peerRow)}
+                            {orderBy(this.props.torrent.peers, ["rateToClient"], ["desc"]).map(this.peerRow)}
                         </tbody>
                     </table>
                 </div>

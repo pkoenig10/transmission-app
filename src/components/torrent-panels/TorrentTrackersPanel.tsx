@@ -1,3 +1,4 @@
+import {orderBy} from "lodash";
 import * as React from "react";
 import {TrackerStats} from "../../api/Transmission";
 import {datetime} from "../../utils/TransmissionUtils";
@@ -19,7 +20,7 @@ export class TorrentTrackersPanel extends React.PureComponent<TransmissionTorren
                             </tr>
                         </thead>
                         <tbody>
-                            {this.props.torrent.trackerStats.map(this.trackerRow)}
+                            {orderBy(this.props.torrent.trackerStats, ["lastAnnouncePeerCount", "seederCount", "leecherCount"], ["desc", "desc", "desc"]).map(this.trackerRow)}
                         </tbody>
                     </table>
                 </div>
