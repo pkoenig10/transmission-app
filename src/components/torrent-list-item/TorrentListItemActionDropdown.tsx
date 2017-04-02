@@ -6,7 +6,7 @@ import {TorrentListItemDropdown, TorrentListItemDropdownProps} from "./TorrentLi
 
 interface TorrentListItemActionDropdownProps extends TorrentListItemDropdownProps {}
 
-export class TorrentListItemActionDropdown extends React.Component<TorrentListItemActionDropdownProps, {}> {
+export class TorrentListItemActionDropdown extends React.PureComponent<TorrentListItemActionDropdownProps, {}> {
     render() {
         const {torrentAction} = this.props;
 

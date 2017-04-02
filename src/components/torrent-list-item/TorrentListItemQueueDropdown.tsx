@@ -7,7 +7,7 @@ interface TorrentListItemQueueDropdownProps extends TorrentListItemDropdownProps
     numTorrents: number;
 }
 
-export class TorrentListItemQueueDropdown extends React.Component<TorrentListItemQueueDropdownProps, {}> {
+export class TorrentListItemQueueDropdown extends React.PureComponent<TorrentListItemQueueDropdownProps, {}> {
     render() {
         const {torrentAction} = this.props;
 
