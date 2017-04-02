@@ -81,6 +81,8 @@ export function status(torrent: Torrent): string {
         case Status.SEED_WAIT:
             return "Queued for seeding";
     }
+
+    return "Unknown";
 }
 
 export function progress(torrent: Torrent): string {
