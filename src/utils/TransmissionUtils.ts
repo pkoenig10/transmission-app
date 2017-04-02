@@ -14,7 +14,7 @@ export function memorySize(bytes: number): string {
 }
 
 export function speedSize(bytes: number): string {
-    return size(bytes, 1000, 0) + "/s";
+    return size(bytes, 1000, 1) + "/s";
 }
 
 function size(bytes: number, base: number, digits: number): string {
