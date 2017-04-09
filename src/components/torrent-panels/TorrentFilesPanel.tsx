@@ -214,14 +214,14 @@ export class TorrentFilesPanel extends React.PureComponent<TransmissionTorrentPr
         };
     }
 
-    private wantedOnChange = (node: Node): React.FocusEventHandler<HTMLInputElement> => {
-        return (event: React.FormEvent<HTMLInputElement>): void => {
+    private wantedOnChange = (node: Node): React.ChangeEventHandler<HTMLInputElement> => {
+        return (event: React.ChangeEvent<HTMLInputElement>): void => {
             this.nodeOnChange(node, this.getWantedKey(event.currentTarget.checked));
         };
     }
 
-    private priorityOnChange = (node: Node): React.FocusEventHandler<HTMLSelectElement> => {
-        return (event: React.FormEvent<HTMLSelectElement>): void => {
+    private priorityOnChange = (node: Node): React.ChangeEventHandler<HTMLSelectElement> => {
+        return (event: React.ChangeEvent<HTMLSelectElement>): void => {
             this.nodeOnChange(node, this.getPriorityKey(parseInt(event.currentTarget.value)));
         };
     }

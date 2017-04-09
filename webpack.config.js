@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const path = require("path")
 const BabiliPlugin = require("babili-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -15,7 +16,7 @@ module.exports = {
     entry: "./src/index.tsx",
     output: {
         filename: "index.js",
-        path: "./dist"
+        path: path.resolve(__dirname, "dist")
     },
 
     resolve: {
