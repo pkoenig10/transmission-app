@@ -1,5 +1,5 @@
+import { History } from "history";
 import * as React from "react";
-import {InjectedRouter} from "react-router";
 import {Dispatch} from "redux";
 import {TransmissionActionCreator, startTorrentsAction, stopTorrentsAction} from "../../actions/TransmissionActions";
 import {Ids, Status, Torrent} from "../../api/Transmission";
@@ -12,7 +12,7 @@ import {TorrentListItemQueueDropdown} from "./TorrentListItemQueueDropdown";
 
 interface TorrentListItemProps {
     dispatch: Dispatch<TransmissionState>;
-    router: InjectedRouter;
+    history: History;
     torrent: Torrent;
     numTorrents: number;
     ignoreClick: boolean;
@@ -66,7 +66,7 @@ export class TorrentListItem extends React.PureComponent<TorrentListItemProps, {
         if (this.props.ignoreClick) {
             this.props.setIgnoreClick(false);
         } else {
-            this.props.router.push(`torrents/${this.props.torrent.hashString}`);
+            this.props.history.push(`torrents/${this.props.torrent.hashString}`);
         }
     }
 

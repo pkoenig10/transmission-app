@@ -2,7 +2,7 @@ import {sortBy} from "lodash";
 import * as React from "react";
 import * as ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import {MapStateToProps, connect} from "react-redux";
-import {InjectedRouter, withRouter} from "react-router";
+import {RouteComponentProps, withRouter} from "react-router";
 import {Dispatch} from "redux";
 import {Torrent} from "../api/Transmission";
 import {TransmissionState} from "../state/TransmissionState";
@@ -10,9 +10,10 @@ import {TorrentListItem} from "./torrent-list-item/TorrentListItem";
 import {TransmissionLoading} from "./TransmissionLoading";
 import {TransmissionPanel} from "./TransmissionPanel";
 
-interface TransmissionTorrentListProps {
-    dispatch?: Dispatch<TransmissionState>;
-    router?: InjectedRouter;
+type TransmissionTorrentListRouteComponentProps = RouteComponentProps<{}>;
+
+interface TransmissionTorrentListProps extends TransmissionTorrentListRouteComponentProps {
+    dispatch: Dispatch<TransmissionState>;
     torrentsLoading: boolean;
     torrents: Torrent[];
 }
@@ -45,7 +46,7 @@ class TransmissionTorrentList extends React.PureComponent<TransmissionTorrentLis
                                 <TorrentListItem
                                     key={torrent.hashString}
                                     dispatch={this.props.dispatch}
-                                    router={this.props.router}
+                                    history={this.props.history}
                                     torrent={torrent}
                                     numTorrents={this.props.torrents.length}
                                     ignoreClick={this.state.ignoreClick}
@@ -66,7 +67,7 @@ class TransmissionTorrentList extends React.PureComponent<TransmissionTorrentLis
     }
 }
 
-const mapStateToProps: MapStateToProps<TransmissionTorrentListProps, {}> = (state: TransmissionState): TransmissionTorrentListProps => {
+const mapStateToProps: MapStateToProps<Partial<TransmissionTorrentListProps>, TransmissionTorrentListRouteComponentProps> = (state: TransmissionState): Partial<TransmissionTorrentListProps> => {
     return {
         torrentsLoading: !state.torrents,
         torrents: state.torrents,

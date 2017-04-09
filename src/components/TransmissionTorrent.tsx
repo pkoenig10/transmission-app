@@ -1,7 +1,8 @@
 import * as classNames from "classnames";
 import * as React from "react";
 import {MapStateToProps, connect} from "react-redux";
-import {Link, RouteComponentProps} from "react-router";
+import {Redirect, RouteComponentProps, withRouter} from "react-router";
+import {Link} from "react-router-dom";
 import {Dispatch} from "redux";
 import {Torrent} from "../api/Transmission";
 import {TransmissionState} from "../state/TransmissionState";
@@ -15,8 +16,14 @@ import {TorrentTrackersPanel} from "./torrent-panels/TorrentTrackersPanel";
 import {TransmissionLoading} from "./TransmissionLoading";
 import {TransmissionPanel} from "./TransmissionPanel";
 
-export interface TransmissionTorrentProps {
-    dispatch?: Dispatch<TransmissionState>;
+interface TransmissionTorrentParams {
+    hashString: string;
+    panel: string;
+}
+type TransmissionTorrentRouteComponentProps = RouteComponentProps<TransmissionTorrentParams>;
+
+export interface TransmissionTorrentProps extends TransmissionTorrentRouteComponentProps {
+    dispatch: Dispatch<TransmissionState>;
     hashString: string;
     panel: string;
     torrentLoading: boolean;
@@ -25,6 +32,10 @@ export interface TransmissionTorrentProps {
 
 class TransmissionTorrent extends React.PureComponent<TransmissionTorrentProps, {}> {
     render() {
+        if (!this.props.panel) {
+            return <Redirect to={`/torrents/${this.props.hashString}/info`}/>;
+        }
+
         const navItems: JSX.Element[] = [
             this.navItem("Info", "info"),
             this.navItem("Files", "files"),
@@ -80,19 +91,13 @@ class TransmissionTorrent extends React.PureComponent<TransmissionTorrentProps, 
     }
 }
 
-interface TransmissionTorrentParams {
-    hashString: string;
-    panel: string;
-}
-type TransmissionTorrentRouteComponentProps = RouteComponentProps<TransmissionTorrentParams, {}>;
-
-const mapStateToProps: MapStateToProps<TransmissionTorrentProps, TransmissionTorrentRouteComponentProps> = (state: TransmissionState, ownProps?: TransmissionTorrentRouteComponentProps): TransmissionTorrentProps => {
+const mapStateToProps: MapStateToProps<Partial<TransmissionTorrentProps>, TransmissionTorrentRouteComponentProps> = (state: TransmissionState, ownProps: TransmissionTorrentRouteComponentProps): Partial<TransmissionTorrentProps> => {
     return {
-        hashString: ownProps.params.hashString,
-        panel: ownProps.params.panel,
+        hashString: ownProps.match.params.hashString,
+        panel: ownProps.match.params.panel,
         torrentLoading: !state.torrents,
-        torrent: state.torrents ? findTorrent(state.torrents, ownProps.params.hashString) : undefined,
+        torrent: state.torrents ? findTorrent(state.torrents, ownProps.match.params.hashString) : undefined,
     };
 };
 
-export const TransmissionTorrentContainer = connect(mapStateToProps)(TransmissionTorrent);
+export const TransmissionTorrentContainer = withRouter(connect(mapStateToProps)(TransmissionTorrent));

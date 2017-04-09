@@ -1,7 +1,6 @@
-import {Location} from "history";
+import {History, Location} from "history";
 import {range} from "lodash";
 import * as React from "react";
-import {InjectedRouter} from "react-router";
 import {Dispatch} from "redux";
 import {addTorrentsAction, setStateAddTorrentsErrorsAction} from "../../actions/TransmissionActions";
 import {TransmissionState} from "../../state/TransmissionState";
@@ -10,7 +9,7 @@ import {TransmissionModal} from "../TransmissionModal";
 
 interface AddTorrentsModalProps {
     dispatch: Dispatch<TransmissionState>;
-    router: InjectedRouter;
+    history: History;
     location: Location;
     url?: string;
 }
@@ -133,7 +132,7 @@ export class AddTorrentsModal extends TransmissionModal<AddTorrentsModalProps, A
 
     private onHide = (): void => {
         if (this.props.location.search) {
-            this.props.router.replace(this.props.location.pathname);
+            this.props.history.replace(this.props.location.pathname);
         }
     }
 
@@ -166,7 +165,7 @@ export class AddTorrentsModal extends TransmissionModal<AddTorrentsModalProps, A
 
     private removeQuery = (): void => {
         if (this.props.location.search) {
-            this.props.router.push(this.props.location.pathname);
+            this.props.history.push(this.props.location.pathname);
         }
     }
 

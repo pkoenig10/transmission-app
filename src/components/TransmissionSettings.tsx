@@ -1,7 +1,9 @@
 import * as classNames from "classnames";
 import * as React from "react";
 import {MapStateToProps, connect} from "react-redux";
-import {Link, RouteComponentProps} from "react-router";
+import {RouteComponentProps, withRouter} from "react-router";
+import {Redirect} from "react-router";
+import {Link} from "react-router-dom";
 import {Dispatch} from "redux";
 import {Session} from "../api/Transmission";
 import {TransmissionState} from "../state/TransmissionState";
@@ -13,8 +15,13 @@ import {SettingsTorrentsPanel} from "./settings-panels/SettingsTorrentsPanel";
 import {SettingsTransfersPanel} from "./settings-panels/SettingsTransfersPanel";
 import {TransmissionLoading} from "./TransmissionLoading";
 
-export interface TransmissionSettingsProps {
-    dispatch?: Dispatch<TransmissionState>;
+interface TransmissionSettingsParams {
+    panel: string;
+}
+type TransmissionSettingsRouteComponentProps = RouteComponentProps<TransmissionSettingsParams>;
+
+export interface TransmissionSettingsProps extends TransmissionSettingsRouteComponentProps {
+    dispatch: Dispatch<TransmissionState>;
     panel: string;
     session: Session;
     isPortOpen: boolean;
@@ -24,6 +31,10 @@ export interface TransmissionSettingsProps {
 
 class TransmissionSettings extends React.PureComponent<TransmissionSettingsProps, {}> {
     render() {
+        if (!this.props.panel) {
+            return <Redirect to="/settings/speed"/>;
+        }
+
         const navItems: JSX.Element[] = [
             this.navItem("Speed", "speed"),
             this.navItem("Transfers", "transfers"),
@@ -84,19 +95,14 @@ class TransmissionSettings extends React.PureComponent<TransmissionSettingsProps
     }
 }
 
-interface TransmissionSettingsParams {
-    panel: string;
-}
-type TransmissionSettingsRouteComponentProps = RouteComponentProps<TransmissionSettingsParams, {}>;
-
-const mapStateToProps: MapStateToProps<TransmissionSettingsProps, {}> = (state: TransmissionState, ownProps?: TransmissionSettingsRouteComponentProps): TransmissionSettingsProps => {
+const mapStateToProps: MapStateToProps<Partial<TransmissionSettingsProps>, TransmissionSettingsRouteComponentProps> = (state: TransmissionState, ownProps: TransmissionSettingsRouteComponentProps): Partial<TransmissionSettingsProps> => {
     return {
+        panel: ownProps.match.params.panel,
         session: state.session,
         isPortOpen: state.isPortOpen,
         updatingBlocklist: state.updatingBlocklist,
         testingPort: state.testingPort,
-        panel: ownProps.params.panel,
     };
 };
 
-export const TransmissionSettingsContainer = connect(mapStateToProps)(TransmissionSettings);
+export const TransmissionSettingsContainer = withRouter(connect(mapStateToProps)(TransmissionSettings));
